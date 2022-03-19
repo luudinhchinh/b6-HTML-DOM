@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+           margin-left: 200px;
+        }
+        .container>#kq {
+            width: 20.5%;
+            height: 50px;
+        }
+        .container>input {
+            width: 5%;
+            height: 40px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="kq"> <br>
+        <input type="button" value="(" onclick="set_num(this.value)">
+        <input type="button" value=")" onclick="set_num(this.value)">
+        <input type="button" value="%" onclick="set_num(this.value)">
+        <input type="button" value="AC" onclick="del()"><br>
+        <input type="button" value="7" onclick="set_num(this.value)">
+        <input type="button" value="8" onclick="set_num(this.value)">
+        <input type="button" value="9" onclick="set_num(this.value)">
+        <input type="button" value="/" onclick="set_num(this.value)"><br>
+        <input type="button" value="4" onclick="set_num(this.value)">
+        <input type="button" value="5" onclick="set_num(this.value)">
+        <input type="button" value="6" onclick="set_num(this.value)">
+        <input type="button" value="*" onclick="set_num(this.value)"><br>
+        <input type="button" value="1" onclick="set_num(this.value)">
+        <input type="button" value="2" onclick="set_num(this.value)">
+        <input type="button" value="3" onclick="set_num(this.value)">
+        <input type="button" value="-" onclick="set_num(this.value)"><br>
+        <input type="button" value="0" onclick="set_num(this.value)">
+        <input type="button" value="." onclick="set_num(this.value)">
+        <input type="button" value="=" onclick="result()">
+        <input type="button" value="+" onclick="set_num(this.value)">
+    </div>
+    <script>
+        let x = "";
+        function a(id) {
+         return document.getElementById(id);
+        }
+        function set_num(num) {
+            x+=num;
+            a('kq').value=x;
+        }
+        function del() {
+            x="";
+            a('kq').value=x;
+        }
+        function result() {
+           a('kq').value=eval(a('kq').value);
+           x = a('kq').value;
+        }
+    </script>
+</body>
+</html>
