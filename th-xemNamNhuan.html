@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt('nhập vào năm'));
+        var namNhuan = false;
+        var nam4 = year%4==0;
+        if(nam4){
+            var nam100 =year%100==0;
+            if(nam100){
+                var nam400 =year%400==0;
+                if(nam400){
+                    namNhuan = true;
+                }
+            }else {
+                namNhuan = true;
+            }
+        }
+        if(namNhuan){
+            alert(year + ' đây là năm nhuận');
+        }else {
+            alert(year + ' đây không phải là năm nhuận');
+        }
+    </script>
+</body>
+</html>
